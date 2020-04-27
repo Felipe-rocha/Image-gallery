@@ -10,4 +10,12 @@ const newImage = document.createElement('img');
 newImage.setAttribute('src', xxx);
 thumbBar.appendChild(newImage);
 
-/* Wiring up the Darken/Lighten button */
+imageButton.addEventListener("click", function(){
+    if (imageButton.textContent == "Darken"){
+        imageButton.textContent = "Lighten";
+    }else{
+        if (imageButton.textContent == "Lighten"){
+            imageButton.textContent = "Darken";
+        }
+    };
+});
