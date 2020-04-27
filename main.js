@@ -5,10 +5,21 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
+for (i=1; i<6; i++){
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/pic'+i+'.jpg');
+    newImage.setAttribute('onclick', 'ExibeImagem(this)');
+    thumbBar.appendChild(newImage);
+}
 
-const newImage = document.createElement('img');
-//newImage.setAttribute('src', xxx);
-thumbBar.appendChild(newImage);
+
+function ExibeImagem(newImage){
+    console.log(newImage.getAttribute('src'));
+    displayedImage.setAttribute('src', newImage.getAttribute('src'));
+    
+}
+
+
 
 var imageButton = document.querySelector(".dark");
 
@@ -26,3 +37,4 @@ imageButton.addEventListener("click", function(){
         }
     };
 });
+
